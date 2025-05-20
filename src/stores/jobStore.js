@@ -5,7 +5,6 @@ export const useJobStore = defineStore('job', {
     jobs: [],
     lastJobId: 0,
   }),
-
   actions: {
     setJobs(jobs) {
       this.jobs = jobs

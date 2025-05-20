@@ -1,6 +1,6 @@
 # vue-options-api
 
-This is a practice project for Vue.js. It uses the options api.
+This is a practice project for Vue.js. It uses the options api. CRUD is performed using http methods via axios from a jobs.json in /src. There are pages to view jobs, add a new job and edit an existing job. Also while adding and deleting a job, the 'id' property of a particular job is managed using store by pinia as a global state management approach. Here, toast is used from the vue-toastification library. A loader that works while loading some components from vue-spinner library. Prime icons are used for their interactive icons. In order to test the apis, json-server library is used as a small server. Prettier and EsLint have been set up.
 
 ## Versions and Dependencies
 

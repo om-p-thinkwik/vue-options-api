@@ -28,27 +28,14 @@ export default {
     async handleSubmit() {
       const jobStore = useJobStore()
 
-      // const newJob = {
-      //   title: this.form.title,
-      //   type: this.form.type,
-      //   location: this.form.location,
-      //   description: this.form.description,
-      //   salary: this.form.salary,
-      //   company: {
-      //     name: this.form.company.name,
-      //     description: this.form.company.description,
-      //     contactEmail: this.form.company.contactEmail,
-      //     contactPhone: this.form.company.contactPhone,
-      //   },
-      // };
       const newJob = structuredClone(toRaw(this.form))
-      newJob.id = jobStore.getNextJobId().toString() // ✅ string ID now
+      newJob.id = jobStore.getNextJobId().toString()
 
       console.log('Form details:', newJob)
 
       try {
         await axios.post('/api/jobs', newJob)
-        jobStore.addJob(newJob) // update local store
+        jobStore.addJob(newJob)
 
         this.toast.success('Job added successfully')
         router.push(`/jobs/${newJob.id}`)
@@ -62,7 +49,7 @@ export default {
     const store = useJobStore()
     if (store.jobs.length === 0) {
       const res = await axios.get('/api/jobs')
-      store.setJobs(res.data) // Populate jobs and lastJobId
+      store.setJobs(res.data)
     }
   },
 }
