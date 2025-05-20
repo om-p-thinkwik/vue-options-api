@@ -1,0 +1,4 @@
+node_modules
+dist
+_theme_files
+**.zip
