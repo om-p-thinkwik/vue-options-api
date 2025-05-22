@@ -5,14 +5,26 @@ import NotFoundView from '@/views/NotFoundView.vue'
 import JobView from '@/views/JobView.vue'
 import AddJobView from '@/views/AddJobView.vue'
 import EditJobView from '@/views/EditJobView.vue'
+import SignUpView from '@/views/auth/SignUpView.vue'
+import LoginView from '@/views/auth/LoginView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
+      path: '/home',
       name: 'home',
       component: HomeView,
+    },
+    {
+      path: '/',
+      name: 'signup',
+      component: SignUpView,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: LoginView,
     },
     {
       path: '/jobs',

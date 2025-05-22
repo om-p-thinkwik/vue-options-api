@@ -1,5 +1,4 @@
-<script>
-</script>
+<script></script>
 
 <template>
   <section class="text-center flex flex-col justify-center items-center h-96">

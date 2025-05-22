@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "Hero",
+  name: 'Hero',
   props: {
     heading: {
       type: String,

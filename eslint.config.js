@@ -8,7 +8,7 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,vue}'],
     languageOptions: {
-      parser: 'vue-eslint-parser',     // Use Vue parser for .vue files
+      parser: 'vue-eslint-parser', // Use Vue parser for .vue files
       parserOptions: {
         parser: '@babel/eslint-parser', // or '@typescript-eslint/parser' if TS
         ecmaVersion: 2020,
@@ -23,9 +23,9 @@ export default defineConfig([
       vue: pluginVue,
     },
     rules: {
-      ...pluginVue.configs['flat/essential'].rules,  // Vue essential rules
-      'no-unused-vars': 'warn',                       // unused vars as warnings
-      'vue/multi-word-component-names': 'off',       // disable multi-word component name rule
+      ...pluginVue.configs['flat/essential'].rules, // Vue essential rules
+      'no-unused-vars': 'warn', // unused vars as warnings
+      'vue/multi-word-component-names': 'off', // disable multi-word component name rule
     },
   },
 ])

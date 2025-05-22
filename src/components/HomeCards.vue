@@ -1,5 +1,5 @@
 <script>
-import Card from './Card.vue' 
+import Card from './Card.vue'
 
 export default {
   components: {

@@ -37,11 +37,11 @@ export default {
         await axios.post('/api/jobs', newJob)
         jobStore.addJob(newJob)
 
-        this.toast.success('Job added successfully')
+        this.toast.success('Job added successfully', { timeout: 2000 })
         router.push(`/jobs/${newJob.id}`)
       } catch (error) {
         console.error('Error fetching jobs', error)
-        this.toast.error('Job not added')
+        this.toast.error('Job not added', { timeout: 2000 })
       }
     },
   },

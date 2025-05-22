@@ -42,7 +42,7 @@ export default {
         this.form = { ...data }
       } catch (error) {
         console.error('Error fetching job:', error)
-        this.toast.error('Failed to load job data')
+        this.toast.error('Failed to load job data', { timeout: 2000 })
       } finally {
         this.isLoading = false
       }
@@ -52,11 +52,11 @@ export default {
       try {
         const updatedJob = structuredClone(toRaw(this.form))
         const { data } = await axios.put(`/api/jobs/${this.jobId}`, updatedJob)
-        this.toast.success('Job updated successfully')
+        this.toast.success('Job updated successfully', { timeout: 2000 })
         router.push(`/jobs/${data.id}`)
       } catch (error) {
         console.error('Error updating job:', error)
-        this.toast.error('Job not updated')
+        this.toast.error('Job not updated', { timeout: 2000 })
       }
     },
   },
