@@ -8,15 +8,10 @@ export default defineConfig({
   plugins: [vue()],
   server: {
     proxy: {
-      '/api/jobs': {
+      '/api': {
         target: 'http://localhost:8000',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/jobs/, '/jobs'),
-      },
-      '/api/users': {
-        target: 'http://localhost:8000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api\/users/, '/users'),
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

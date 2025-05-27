@@ -23,6 +23,11 @@ export default {
       default: () => ({}),
     },
   },
+  data() {
+    return {
+      passwordVisible: false,
+    }
+  },
   computed: {
     formData: {
       get() {
@@ -41,6 +46,9 @@ export default {
       }
       this.$emit('submitted', this.formData)
     },
+    togglePassword() {
+      this.passwordVisible = !this.passwordVisible
+    },
   },
 }
 </script>
@@ -55,18 +63,32 @@ export default {
         {{ title }}
       </p>
 
-      <div v-for="field in fields" :key="field" class="mb-4">
+      <div v-for="field in fields" :key="field" class="mb-4 relative">
         <label :for="field" class="block text-sm font-medium text-gray-700 mb-1">
           {{ field }}
         </label>
         <input
-          :type="field === 'Password' ? 'password' : 'text'"
+          :type="
+            passwordVisible && field === 'Password'
+              ? 'text'
+              : field === 'Password'
+                ? 'password'
+                : 'text'
+          "
           :id="field"
           :name="field"
           v-model="formData[field]"
           required
-          class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400 pr-10"
         />
+
+        <!-- Eye icon for password field -->
+        <i
+          v-if="field === 'Password'"
+          :class="passwordVisible ? 'pi pi-eye-slash' : 'pi pi-eye'"
+          class="absolute right-3 top-9 text-gray-600 cursor-pointer"
+          @click="togglePassword"
+        ></i>
       </div>
 
       <button

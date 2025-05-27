@@ -8,7 +8,7 @@ export const useJobStore = defineStore('job', {
   actions: {
     setJobs(jobs) {
       this.jobs = jobs
-      this.lastJobId = jobs.reduce((max, job) => Math.max(max, job.id), 0)
+      this.lastJobId = jobs.reduce((max, job) => Math.max(max, Number(job.id)), 0)
     },
     getNextJobId() {
       this.lastJobId++
@@ -19,7 +19,7 @@ export const useJobStore = defineStore('job', {
     },
     deleteJob(id) {
       this.jobs = this.jobs.filter((job) => job.id !== id)
-      if (Number(id) === this.lastJobId) {
+      if (id === this.lastJobId) {
         this.lastJobId = this.jobs.reduce((max, job) => Math.max(max, Number(job.id)), 0)
       }
     },

@@ -7,6 +7,7 @@ import AddJobView from '@/views/AddJobView.vue'
 import EditJobView from '@/views/EditJobView.vue'
 import SignUpView from '@/views/auth/SignUpView.vue'
 import LoginView from '@/views/auth/LoginView.vue'
+import TwoFactorView from '@/views/auth/TwoFactorView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -45,6 +46,11 @@ const router = createRouter({
       path: '/jobs/edit/:id',
       name: 'edit-job',
       component: EditJobView,
+    },
+    {
+      path: '/twoFactorAuth',
+      name: 'two-factor-auth',
+      component: TwoFactorView,
     },
     {
       path: '/:catchAll(.*)',

@@ -78,7 +78,22 @@ export default {
                 >Add Job</RouterLink
               >
               <RouterLink
+                to="/twoFactorAuth"
+                v-if="loggedIn"
+                :class="[
+                  isActiveLink('/twoFactorAuth')
+                    ? 'bg-green-900'
+                    : 'hover:bg-gray-900 hover:text-white',
+                  'text-white',
+                  'px-3',
+                  'py-2',
+                  'rounded-md',
+                ]"
+                >2FA</RouterLink
+              >
+              <RouterLink
                 to="/"
+                v-if="!loggedIn"
                 :class="[
                   isActiveLink('/') ? 'bg-green-900' : 'hover:bg-gray-900 hover:text-white',
                   'text-white',

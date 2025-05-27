@@ -21,7 +21,6 @@ export default {
     },
   },
   async mounted() {
-    console.log('Job data', this.jobs)
     try {
       const response = await axios.get('/api/jobs')
       this.jobs = response.data

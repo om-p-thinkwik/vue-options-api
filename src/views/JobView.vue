@@ -27,12 +27,15 @@ export default {
           await axios.delete(`/api/jobs/${this.jobId}`)
           const jobStore = useJobStore()
           jobStore.deleteJob(this.jobId)
-          this.toast.success('Job deleted successfully', { timeout: 2000 })
+          this.toast('Job deleted successfully', {
+            timeout: 1000,
+            toastClassName: 'custom-toast-success',
+          })
           router.push('/jobs')
         }
       } catch (error) {
-        console.error('Error fetching jobs', error, { timeout: 2000 })
-        this.toast.error('Job not deleted')
+        console.error('Error fetching jobs', error, { timeout: 1000 })
+        this.toast('Job not deleted', { timeout: 1000, toastClassName: 'custom-toast-success' })
       }
     },
   },

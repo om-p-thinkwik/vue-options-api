@@ -1,7 +1,58 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "Username": "Om",
+      "Password": "999",
+      "isTwoFactorEnabled": true,
+      "twoFactorSecret": "42QOCBFRDGYLKMVNSF2CJZF2FU4KYJMI"
+    },
+    {
+      "id": 2,
+      "Username": "Virat",
+      "Password": "999",
+      "isTwoFactorEnabled": false,
+      "twoFactorSecret": ""
+    },
+    {
+      "id": 3,
+      "Username": "Rohit",
+      "Password": "999",
+      "isTwoFactorEnabled": false,
+      "twoFactorSecret": ""
+    },
+    {
+      "Username": "Deepal",
+      "Password": "789",
+      "isTwoFactorEnabled": false,
+      "twoFactorSecret": "",
+      "id": 4
+    },
+    {
+      "Username": "Kohli",
+      "Password": "999",
+      "isTwoFactorEnabled": true,
+      "twoFactorSecret": "7GAKCQ34JZRLSUW7T3IXANQ76R2AJ7CV",
+      "id": 5
+    },
+    {
+      "Username": "poojan",
+      "Password": "999",
+      "isTwoFactorEnabled": true,
+      "twoFactorSecret": "2HK7OTLLEWJRC3JKW7VKFWEV2UK7G4ZK",
+      "id": 6
+    },
+    {
+      "Username": "Dhoni",
+      "Password": "999",
+      "isTwoFactorEnabled": true,
+      "twoFactorSecret": "C3JPNIWOWDS5GL3BLYHUKCPLPQKCWGYY",
+      "id": 7
+    }
+  ],
   "jobs": [
     {
-      "id": "1",
+      "id": 1,
       "title": "Senior Vue Developer",
       "type": "Full-Time",
       "description": "We are seeking a talented Front-End Developer to join our team in Boston, MA. The ideal candidate will have strong skills in HTML, CSS, and JavaScript, with experience working with modern JavaScript frameworks such as Vue or Angular.",
@@ -15,7 +66,7 @@
       }
     },
     {
-      "id": "2",
+      "id": 2,
       "title": "Front-End Engineer (Vue)",
       "type": "Part-Time",
       "description": "Join our team as a Front-End Developer in sunny Miami, FL. We are looking for a motivated individual with a passion for crafting beautiful and responsive web applications. Experience with UI/UX design principles and a strong attention to detail are highly desirable.",
@@ -29,7 +80,7 @@
       }
     },
     {
-      "id": "3",
+      "id": 3,
       "title": "Vue.js Developer",
       "type": "Full-Time",
       "description": "Are you passionate about front-end development? Join our team in vibrant Brooklyn, NY, and work on exciting projects that make a difference. We offer competitive compensation and a collaborative work environment where your ideas are valued.",
@@ -43,7 +94,7 @@
       }
     },
     {
-      "id": "4",
+      "id": 4,
       "title": "Vue Front-End Developer",
       "type": "Part-Time",
       "description": "Join our team as a Part-Time Front-End Developer in beautiful Pheonix, AZ. We are looking for a self-motivated individual with a passion for creating engaging user experiences. This position offers flexible hours and the opportunity to work remotely.",
@@ -57,7 +108,7 @@
       }
     },
     {
-      "id": "5",
+      "id": 5,
       "title": "Full Stack Vue Developer",
       "type": "Full-Time",
       "description": "Exciting opportunity for a Full-Time Front-End Developer in bustling Atlanta, GA. We are seeking a talented individual with a passion for building elegant and scalable web applications. Join our team and make an impact!",
@@ -71,7 +122,7 @@
       }
     },
     {
-      "id": "6",
+      "id": 6,
       "title": "Vue Native Developer",
       "type": "Full-Time",
       "description": "Join our team as a Front-End Developer in beautiful Portland, OR. We are looking for a skilled and enthusiastic individual to help us create innovative web solutions. Competitive salary and great benefits package available.",
@@ -83,6 +134,20 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
+    },
+    {
+      "type": "Internship",
+      "title": "Om",
+      "description": "Om",
+      "salary": "Under $50K",
+      "location": "Om",
+      "company": {
+        "name": "Om",
+        "description": "Om",
+        "contactEmail": "abc@gmail.com",
+        "contactPhone": "123"
+      },
+      "id": 7
     }
   ]
 }

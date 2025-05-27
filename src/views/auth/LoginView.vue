@@ -20,14 +20,20 @@ export default {
         if (localStorage.getItem('user')) {
           const signedUpUser = JSON.parse(localStorage.getItem('user'))
           if (signedUpUser.Username === data.Username && signedUpUser.Password === data.Password) {
-            this.toast.success('Login Successful', { timeout: 2000 })
+            this.toast('Login Successful', {
+              timeout: 1000,
+              toastClassName: 'custom-toast-success',
+            })
             this.$router.push('/home')
           } else {
-            this.toast.error('Login unsuccessful', { timeout: 2000 })
+            this.toast('Login unsuccessful', {
+              timeout: 1000,
+              toastClassName: 'custom-toast-error',
+            })
           }
         }
       } catch (error) {
-        this.toast.error('Some error in Login', { timeout: 2000 })
+        this.toast('Some error in Login', { timeout: 1000, toastClassName: 'custom-toast-error' })
       }
     },
   },
@@ -40,7 +46,7 @@ export default {
       :fields="items"
       title="Login"
       buttonName="Login"
-      :save-to-local-storage="false"
+      :save-to-local-storage="true"
       v-model="formValues"
       @submitted="handleFormSubmission"
     />

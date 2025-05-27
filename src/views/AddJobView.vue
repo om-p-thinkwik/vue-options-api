@@ -29,19 +29,20 @@ export default {
       const jobStore = useJobStore()
 
       const newJob = structuredClone(toRaw(this.form))
-      newJob.id = jobStore.getNextJobId().toString()
-
-      console.log('Form details:', newJob)
+      newJob.id = jobStore.getNextJobId()
 
       try {
         await axios.post('/api/jobs', newJob)
         jobStore.addJob(newJob)
 
-        this.toast.success('Job added successfully', { timeout: 2000 })
+        this.toast('Job added successfully', {
+          timeout: 1000,
+          toastClassName: 'custom-toast-success',
+        })
         router.push(`/jobs/${newJob.id}`)
       } catch (error) {
         console.error('Error fetching jobs', error)
-        this.toast.error('Job not added', { timeout: 2000 })
+        this.toast('Job not added', { timeout: 1000, toastClassName: 'custom-toast-error' })
       }
     },
   },
