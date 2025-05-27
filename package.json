@@ -19,7 +19,6 @@
     "json-server": "^0.17.4",
     "otpauth": "^9.4.0",
     "pinia": "^3.0.2",
-    "pinia-plugin-persistedstate": "^4.3.0",
     "primeicons": "^7.0.0",
     "qrcode": "^1.5.4",
     "vue": "^3.5.13",
