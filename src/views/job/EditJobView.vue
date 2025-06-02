@@ -28,12 +28,10 @@ export default {
       },
     }
   },
-
   created() {
     this.jobId = this.route.params.id
     this.fetchJob()
   },
-
   methods: {
     async fetchJob() {
       try {
@@ -50,7 +48,6 @@ export default {
         this.isLoading = false
       }
     },
-
     async handleSubmit() {
       try {
         const updatedJob = structuredClone(toRaw(this.form))

@@ -1,5 +1,5 @@
 <script>
-import Form from '@/components/Form.vue'
+import Form from '@/components/common/Form.vue'
 import { useToast } from 'vue-toastification'
 
 export default {

@@ -1,5 +1,5 @@
 <script>
-import Form from '@/components/Form.vue'
+import Form from '@/components/common/Form.vue'
 import { useUserStore } from '@/stores/userStore'
 import axios from 'axios'
 import { toRaw } from 'vue'
@@ -27,6 +27,11 @@ export default {
       newUser.Password = newUser.Password?.trim()
       newUser.isTwoFactorEnabled = false
       newUser.twoFactorSecret = ''
+      newUser.email = ''
+      newUser.phone = ''
+      newUser.age = ''
+      newUser.experience = ''
+      newUser.interestFields = ''
 
       if (!newUser.Username || !newUser.Password) {
         this.toast('Username and password cannot be empty', {

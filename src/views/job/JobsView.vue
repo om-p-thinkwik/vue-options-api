@@ -1,5 +1,5 @@
 <script>
-import JobListings from '@/components/JobListings.vue'
+import JobListings from '@/components/job/JobListings.vue'
 
 export default {
   components: {
